@@ -32,6 +32,14 @@ describe "BankAccount" do
     end
   end
 
+  describe '#withdrawl' do
+    it "can withdrawl money from the account" do
+      expect(avi.balance).to eq(1000)
+      avi.withdrawl(500)
+      expect(avi.balance).to eq(500)
+    end
+  end
+
   describe '#display_balance' do
     it "can display its balance" do
       expect(avi.display_balance).to eq("Your balance is $#{avi.balance}.")
