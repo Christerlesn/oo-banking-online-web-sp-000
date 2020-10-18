@@ -32,10 +32,10 @@ describe "BankAccount" do
     end
   end
 
-  describe '#withdrawl' do
-    it "can withdrawl money from the account" do
+  describe '#withdrawal' do
+    it "can withdrawal money from the account" do
       expect(avi.balance).to eq(1000)
-      avi.withdrawl(500)
+      avi.withdrawal(500)
       expect(avi.balance).to eq(500)
     end
   end
