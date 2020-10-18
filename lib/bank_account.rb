@@ -31,5 +31,7 @@ attr_reader :name
   end
 
 end
+
+binding.pry
 # try to create a test that if bankaccount.status == "closed", prevent transfers and deposits
 # rspec ./spec/banking_spec.rb
