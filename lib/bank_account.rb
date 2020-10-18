@@ -13,6 +13,11 @@ attr_reader :name
      @balance
   end
 
+  def withdrawal(amount)
+    @balance = @balance - amount
+    @balance
+  end
+
   def display_balance
     "Your balance is $#{self.balance}."
   end
