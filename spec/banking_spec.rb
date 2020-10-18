@@ -37,6 +37,12 @@ describe "BankAccount" do
       expect(avi.balance).to eq(1000)
       avi.withdrawal(500)
       expect(avi.balance).to eq(500)
+
+    it "cannot make a withdrawl if account status is closed" do
+      avi.close_account
+      closed_account_withdrawal = BankAccount.new("")
+      expect(closed_account_withdrawal.withdrawal).to eq("Transaction denied. Account closed")
+    end
     end
   end
 
@@ -57,6 +63,7 @@ describe "BankAccount" do
       expect(@closed.valid?).to eq(false)
     end
   end
+
 
   describe '#close_account' do
     it "can close its account" do
